@@ -1,0 +1,104 @@
+body {
+	background-color: #fff;
+	font-family: 'Lucida Handwriting';
+}
+#conteneur {
+	background-color: #DAB30A;
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	border-width: 1px;
+	border-style: dotted;
+	border-color: black;
+	-moz-box-shadow: 8px 8px 12px #aaa;
+	-webkit-box-shadow: 8px 8px 12px #aaa;
+	-moz-border-radius-topleft: 15px;
+	-moz-border-radius-topright: 15px;
+	-webkit-border-top-left-radius: 15px;
+	-webkit-border-top-right-radius: 15px;
+}
+h1 {
+	color: white;
+	text-align: center;
+}
+.effet {
+	color: black;
+}
+#menu {
+	background-color: #87591A;
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+}
+#menu ul li {
+	text-decoration: none;
+	display: inline;
+	margin-left: 20px;
+}
+#menu a {
+	text-decoration: none;
+	color: #fff;
+}
+#menu a:hover {
+	color: #ffff00;
+}
+#contenu {
+	font-family: 'Lucida Handwriting';
+	font-size: 12px;
+	background-image: url('../img/papier.gif');
+	margin-bottom: 20px;
+	height: 700px;
+	width: 700px;
+	padding-left: 10px;
+	padding-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #f6f6f6;
+	overflow:auto;
+	/*    border-width: 2px;
+	border-style: outset;
+	border-color: black;
+*/
+	-moz-box-shadow: -4px -4px 12px	#000;
+	-webkit-box-shadow: -4px -4px 12px #000;
+}
+#contenu input[type=button], textarea {
+	font-family: 'Lucida Handwriting';
+	background-color: transparent;
+	border-width: 0px;
+		-moz-box-shadow: 4px 4px 8px	#000;
+	-webkit-box-shadow: 4px 4px 8px #000;
+/*	width: 100%;
+	height: 100%;*/
+}
+#accueil{
+  font-size: 18px;
+}
+#imgAide{
+background-image: url('../img/hommeAide.png');
+background-repeat: no-repeat;
+height: 250px;
+width: 250px;
+position:fixed;
+bottom:0px;
+right:0px;
+}
+.imgBulle{
+background-image: url('../img/bulle.gif');
+background-repeat: no-repeat;
+position:fixed;
+text-align:center;
+width:201px;
+height:150px;
+bottom:220px;
+right:80px;
+}
+#txtAide{
+  font-size: 10px;
+position:fixed;
+text-align:center;
+width:160px;
+height:100px;
+bottom:220px;
+right:100px;
+}

@@ -1,0 +1,20 @@
+{include file="{$cheminTemplate}menu.html"}
+
+       <form method="post" action="?page=modifier">
+<table>
+{section name=idx_annuaire loop=$annuaire}
+            <tr><td>Nom *</td><td><input type='text' value='{$annuaire[idx_annuaire].nom}' name='nom' /></td></tr>
+            <tr><td>URL *</td><td><input type='text' value='{$annuaire[idx_annuaire].url|urldecode}' name='url' /></td></tr>
+           <tr><td>Code html</td><td><input type='text' value='{$annuaire[idx_annuaire].codehtml}' name='codehtml' /></td></tr>
+            <tr><td>Description</td><td><input type='text' value='{$annuaire[idx_annuaire].description}' name='description' /></td></tr>
+            <tr><td>Target</td><td>                    
+                    <select name="target" >
+                        {html_options values=$target output=$target}
+                    </select>
+                      </td></tr>
+        <tr><td>Lang</td><td><input type="text" name="lang" maxlength="5" value="{$annuaire[idx_annuaire].lieu}"/></td></tr>
+        <tr><td><span title="Sens de lecture du site exemple ltr left to right de gauche a droite">Dir</span</td><td><select name="dir"><option value="ltr" >ltr</option><option value="rtl" >rtl</option></select></td></tr>
+        <tr><td><input type='hidden' value='{$annuaire[idx_annuaire].id_annuaire}' name='id' /></td><td><input type='hidden' value='1' name='modifier' /></td></tr>
+           <tr><td>&nbsp;</td><td>{$btnRetour}&nbsp;{$btnValider}</td></tr>
+ {/section}
+</table></form>

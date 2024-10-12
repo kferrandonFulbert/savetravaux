@@ -1,0 +1,157 @@
+/* 
+    Document   : frannuaire
+    Created on : 25 f�vr. 2011, 15:57:13
+    Author     : kferrandon
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+body{background-color:#FF8100;  margin: 0; /* pour �viter les marges */
+     background-image: url('img/bck.png');
+     background-repeat: repeat-x;  
+  text-align: center; /* pour corriger le bug de centrage IE */ }
+a{color: black;text-decoration: none;}
+a:hover{text-decoration: underline;}
+a.bouton, 
+button.bouton { 
+    display:-moz-inline-box; 
+    display:inline-block; 
+    margin:0; 
+    padding:0; 
+    font:16px/1.5 Arial, Helvetica, sans-serif; 
+    white-space:nowrap; 
+    text-align:center; 
+    vertical-align:middle; 
+    cursor:pointer; 
+    border:0; 
+    background:none;
+} 
+a.bouton span, 
+button.bouton span { 
+    position:relative; 
+    float:left; 
+    padding:0 0 0 5px; 
+    vertical-align:middle; 
+    background:url(img/gauche2.png) left top no-repeat; 
+} 
+a.bouton span span, 
+button.bouton span span { 
+    padding:0 5px 0 0; 
+    background:url(img/droit2.png) right top no-repeat; 
+} 
+a.bouton span span span, 
+button.bouton span span span { 
+    height:26px; 
+    padding:0; 
+    line-height:1.5; 
+    background:url(img/milieu2.png) left top repeat-x; 
+} 
+ 
+* html button {width:1%; overflow:visible;} 
+*:first-child+html button {overflow:visible;}
+
+h2{
+    text-align: center;
+    color: white;
+}
+.contenue{
+    background-color: #000;
+    width: 80%;
+    height: 700px;
+    text-align: center;
+    overflow: auto;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+table{width: 90%; margin-left: auto; margin-right: auto; background: #FF8100; color: #000;}
+caption{color:#fff;}
+td{padding-left: 10px;text-align: center;}
+tr:nth-child(even) {background: #fff;}
+tr:nth-child(odd) {background: #FF8100; }
+tr:hover{background-color: #FFFF00; cursor: pointer; }
+.footer{
+    margin-bottom: 0px;
+    text-align: center;
+    color: #fff;
+}
+.footer a{
+    color: #ffff77;
+}
+
+.partenaire{
+  height: 200px;
+  overflow: auto;
+}
+
+input, select{
+width : 150px;
+}
+img{
+    border: 0;
+}
+nav a{
+    color: #fff;
+    -webkit-transition-property: #fff;
+    -webkit-transition-duration: 2s;
+				
+			
+    -moz-transition-property:  #fff;
+    -moz-transition-duration: 2s;
+				
+    transition-property:  #fff;
+    transition-duration: 2s;
+}
+nav a:hover{
+    color: #ffff00;
+}
+/*.banniere{
+    background-image: url(img/banniere.png);
+    background-repeat: no-repeat;
+    width: 1100px;
+    height: 200px;
+}*/
+
+/***********
+pagination 
+*/
+.pagination {
+font:12px Arial, Helvetica, sans-serif;
+text-align:center;
+}
+ 
+.pagination a {
+background:#fff;
+border:1px solid #FF8100;
+color:#000;
+margin:2px;
+padding:.2em .4em;
+text-decoration:none
+}
+ 
+.pagination a:hover {
+background:#fff;
+border:1px solid #FF8100;
+color:#FF8100;
+}
+ 
+.pagination span.inactive {
+background:#000;
+border:1px solid #000;
+color:#000;
+margin:2px;
+padding:.2em .4em;
+}
+ 
+.pagination span.active {
+background:#FF8100;
+border:1px solid #ffff00;
+color:#ffff00;
+font-weight:700;
+margin:2px;
+padding:.2em .4em;
+}

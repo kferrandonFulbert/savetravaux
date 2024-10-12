@@ -1,0 +1,54 @@
+<h3><a name="menu">Menu</a></h3>
+<ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#compression-navigateur">Optimisation pour le navigateur</a>
+        <ul>
+            <li><a href="#Compression-css">Compression CSS</a></li>
+            <li><a href="#Compression-javascript">Compression javascript</a></li>
+            <li><a href="#Compression-html">Compression html</a></li>
+        </ul>
+    </li>
+    <li><a href="#compression-serveur">Optimisation pour le Serveur</a>
+        <ul>
+            <li><a href="#requete">les requetes</a></li>
+            <li><a href="#code">Le code</a></li>
+            <li><a href="#materiel">Le matériel</a></li>
+        </ul>
+</ul>
+<h3><a name="introduction" href="#">Introduction</a></h3>
+comme expliquer dans la 1ere partie : Google prend maintenant en compte le temps de chargement d'un site pour le référencement.
+Charge aux développeurs de bien penser son code et de l'optimiser, nous allons voir quelques pistes comme limiter les demandes aux serveurs,
+Compresser le code, optimiser son code.
+
+<h3><a title="Compression du code" name="compression-code" href="#compression-code">Compression du code</a></h3>
+Si vous avez beaucoup de code html, js, css ou tout se qui agit coter navigateur, il faut compresser votre code (comment ca compresser?).
+un espace ou un retour a la ligne coute beaucoup d'octet sur une page meme si cela ne parait pas, en enlevant tout ces caractères inutle on améliore les temps de performance d'affichage meme si cela peut paraitre dérisoire.
+Oui mais la téléphonie prenant de plus en plus de place dans le surf sur internet et que meme en 3G les chargements de site peuvent entre long parter du principe de qui peu le plus peu le moins.
+
+<h4>1.1. <a title="Compromis des images" name="compromis-image">Le bon compromis de compression</a></h4>
+Si  vous enregistrez votre image en png ou jpg votre image sera compresser avec le mode par défaut proposer par votre logiciel d'image. Sachez que lorsque vous enregistrez une image dans un format de compression comme jpg ou png vous pouvez définir le taux de compression, a vous de trouver un bon compromis entre un taux de compression fort et une bonne qualité de l'image.
+Cependant il existe des outils qui permettent de choisir un bon ratio a votre place, ainsi vous pouvez utilisez des outils comme <a href="http://developer.yahoo.com/yslow/" target="_blank">YSLOW </a> proposer par Yahoo  ou encore <a href="http://code.google.com/intl/fr/speed/page-speed/download.html" target="_blank">page speed</a> proposé par Google.   Ces outils vous donnent pleins d'astuces pour optimiser vos pages.
+Exemple avec YSLOW:
+
+<a title="yslow en image" href="http://www.frannuaire-gratuit.com/img/yslow.jpg" target="_blank"><img src="http://www.frannuaire-gratuit.com/img/yslow.jpg" alt="yslow en image" width="700px" height="150px" /></a>
+<h4>1.2. <a title="miniature" name="miniature">Miniature</a></h4>
+Un bon moyen d'ajouter des liens interne à votre site et d'accélérer le temps d'affichage de ces pages consiste à utiliser des miniatures d'images avec un lien vers l'images tailles réelle sans compression.
+Cette méthode a un avantage souvent négliger, elle vous permettra d'avoir votre image référencer dans les moteurs d'image.
+Ex:
+<a title="groupe ABYS" href="http://abys-music.com/PICTURES/template/equipage/abys.jpg" target="_blank"><img src="http://www.frannuaire-gratuit.com/img/abys.jpg" alt="groupe abys" /></a>
+Code source:
+<blockquote>&lt;a href="http://abys-music.com/PICTURES/template/equipage/abys.jpg" title="groupe ABYS" target="_blank" &gt;  &lt;img src=" http://www.frannuaire-gratuit.com/img/abys.jpg " alt="groupe abys " /&gt; &lt;/a&gt;</blockquote>
+<h3>2.<a title="requête serveur" name="requete-serveur"> Limiter les requêtes au serveur</a></h3>
+Noter bien que lorsque vous faites appelle a une page HTML, PHP, ASP ou autre votre navigateur fait une première requête au serveur pour savoir si la page appeler existe bien et en charger le contenu en cas de valeur retour 200, mais cela ne s'arrête pas là, tous les éléments externe de la page (css, js, image, et autre composant externe comme les outil d'anayse, ou de MAP... etc) demande pour chacun d'eux une requête serveur.
+<h4>2.1. <a title="Sprites" name="sprites"> Les Sprites</a></h4>
+Les sprites est une solution qui est bien connu du monde du jeu vidéo. elle consiste a avoir toutes les images de la page dans une seul est même image, il faut ensuite découper l'image  pour en utiliser que la parti voulu.
+Cela permet de limiter les requêtes aux serveurs.
+Cette solution nécessite certaines connaissance en css et en html .
+Pour allez plus loin un exemple de <a href="http://www.pompage.net/pompe/sprites/">sprite css</a>.
+<h3>3.<a title="GZIP" name="gzip" href="http://fr.wikipedia.org/wiki/Gzip" target="_blank">gzip</a> / <a href="http://fr.wikipedia.org/wiki/Deflate" target="_blank">Deflate</a></h3>
+Une des méthodes les plus connues pour compresser des fichiers et GZIP.
+Le serveur compresse les fichiers (jpg, png, gif pour les images) mais il peut servir pour tout type de fichier (css, js html...).
+C'est le navigateur qui va ensuite décompresser les fichiers.
+Voici un article très complet sur <a href="http://www.alsacreations.com/article/lire/914-compression-pages-html-css-gzip-deflate.html" target="_blank">GZIP</a>
+
+<a href="#menu">remonter</a>

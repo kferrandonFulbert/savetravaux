@@ -1,0 +1,20 @@
+{include file="{$cheminTemplate}menu.html"}
+<div class="partenaire">
+            <h2>partenaire existant</h2>
+            <table>
+
+{section name=idx_annuaire loop=$partenaire}
+    <tr style="background-color:{cycle values='#ffffff,#FF8100'}"><td  onclick="window.open('{$partenaire[idx_annuaire].url|urldecode}');return false;">
+                <a href='{$partenaire[idx_annuaire].url|urldecode}' title='{$partenaire[idx_annuaire].description}' >{$partenaire[idx_annuaire].nom}</a>
+                </td>
+                <td><a href='?page=supprimer&id={$partenaire[idx_annuaire].id_annuaire}'>Supp.</a></td>
+                <td><a href='?page=modifier&id={$partenaire[idx_annuaire].id_annuaire}'>Modif.</a></td>
+                </tr>
+{/section}
+</table>
+            <br />
+{$btnRetour}&nbsp;{$btnValider}
+
+</div>
+
+

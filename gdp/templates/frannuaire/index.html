@@ -1,0 +1,16 @@
+{include file="{$chemin}header.html"}
+ <body>
+     <div class="contenue">
+         <a href="http://www.frannuaire-gratuit.com/" title="Annuaire gratuit"><img src="{$chemin}img/banniere.png" width="100%" alt="Banniere de l 'annuaire gratuit" /></a>
+         <h2>{$titre}</h2>
+        
+<table>
+{section name=idx_annuaire loop=$annuaire}
+    <tr><td style="background-color:{cycle values='#ffffff,#FF8100'};" onclick="window.open('{$annuaire[idx_annuaire].url|urldecode}');return false;"><a hreflang='{$annuaire[idx_annuaire].lieu}'  dir='{$annuaire[idx_annuaire].dir}' rel='{$annuaire[idx_annuaire].rel}'
+            href='{$annuaire[idx_annuaire].url|urldecode}' title='{$annuaire[idx_annuaire].description}' >{$annuaire[idx_annuaire].nom}</a></td></tr>
+{/section}
+</table><br />
+{$pagination}<br /><br />
+ {$bouton}
+</div>
+{include file="{$chemin}footer.html"}

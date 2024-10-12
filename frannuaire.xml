@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <Module>
+   <ModulePrefs title="Annuaire generaliste gratuit">
+     <Require feature="opensocial-0.8" />
+   </ModulePrefs>
+   <Content type="html">
+     <![CDATA[
+     <link rel="stylesheet" type="text/css" href="http://celtic28.free.fr/gadget.css" />
+       
+       <script language="javascript">
+var datedujour, date, mois, mois1, jour, jour1, an;
+datedujour = new Date();
+jour = datedujour.getDay()
+switch(jour){
+case 1 :
+jour1 ="Lundi"
+break;
+case 2 :
+jour1 ="Mardi"
+break;
+case 3 :
+jour1 ="Mercredi"
+break;
+case 4 :
+jour1 ="Jeudi"
+break;
+case 5 :
+jour1 ="Vendredi"
+break;
+case 6 :
+jour1 ="Samedi"
+break;
+case 0 :
+jour1 ="Dimanche"
+break;
+}
+date = datedujour.getDate()
+mois = datedujour.getMonth()
+switch(mois+1){
+case 1 :
+mois1 ="Janvier"
+break;
+case 2 :
+mois1 ="F&eacute;vrier"
+break;
+case 3 :
+mois1 ="Mars"
+break;
+case 4 :
+mois1 ="Avril"
+break;
+case 5 :
+mois1 ="Mai"
+break;
+case 6 :
+mois1 ="Juin"
+break;
+case 7 :
+mois1 ="Juillet"
+break;
+case 8 :
+mois1 ="Aout"
+break;
+case 9 :
+mois1 ="Septembre"
+break;
+case 10 :
+mois1 ="Octobre"
+break;
+case 11 :
+mois1 ="Novembre"
+break;
+case 12 :
+mois1 ="D&eacute;cembre"
+break;
+}
+an = datedujour.getFullYear()
+document.write("<div align='right' id='date'>");
+document.write(jour1, " ");
+document.write(date, " ");
+document.write(mois1 , " ");
+document.write(an, " ");
+document.write("</div>");
+</script> 
+<div style="text-align: center;"><h2>FRannuaire-gratuit.com</h2></div>
+<div style="text-align: center;">
+  <form action="http://www.frannuaire-gratuit.com/index.php?do=basic" target="_blank" method="post"><input type="hidden" name="PHPSESSID" value="af8ecf0f418e36b3a0be47b6a6a6d1b2" />
+  
+  <p>
+  <input type="hidden" name="action" value="meta_send" />
+  <input type="hidden" name="do" value="basic" />
+  <input type="hidden" name="category" value="1" />
+  <input type="text" name="url" value="http://" size="40" />
+  &nbsp;<input type="submit" value="Continuer" />
+  </p>
+  </form>
+  <br />
+  </div>
+  <!--<div style="text-align: center;">
+  <form action="http://www.frannuaire-gratuit.com/index.php?do=basic&amp;category=1" target="_blank" method="post"><input type="hidden" name="PHPSESSID" value="af8ecf0f418e36b3a0be47b6a6a6d1b2" />
+  <p style="text-align: center;">
+  <input type="hidden" name="action" value="meta_pass" />
+  <input type="submit" value="Passer la d&eacute;tection" />
+  </p>
+  </form>
+</div>-->
+<div id="footer" ><br />propos&eacute; par <a href="http://www.frannuaire-gratuit.com/" target="_blank">annuaire g&eacute;n&eacute;raliste gratuit</a></div>
+     ]]>
+   </Content>
+ </Module>

@@ -1,0 +1,4 @@
+//MO016-017.TXT ANA00016 TO ANA00017
+Mot_clef		TAR	73	nouvelle taille enregistrement : 73
+Mot_clef	IDPage	RUB+		IDPage est une nouvelle clé
+Page		NWL	Page (IDPage) et Mot_clef (IDPage)	Nouvelle liaison entre les fichiers Page (IDPage) et Mot_clef (IDPage)

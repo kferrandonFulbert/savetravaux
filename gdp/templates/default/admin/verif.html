@@ -1,0 +1,25 @@
+{include file="{$cheminTemplate}menu.html"}
+      <h2>Ajouter un partenaire</h2>
+<form method="post" action="?page=ajouter">
+    <table>
+        <tr><td>Nom *</td><td><input type="text" name="nom" maxlength="75"/></td></tr>
+        <tr><td>URL *</td><td><input type="text" name="url" maxlength="255"/></td></tr>
+        <tr><td>Code html</td><td><input type="text" name="codehtml" maxlength="255"/></td></tr>
+        <tr><td>Description</td><td><input type="text" name="description"/></td></tr>
+        <tr><td>Target <img src="{$chemin}img/aide.png" width="20px;" height="20px;" alt="Aide sur l'attribut target" title="Target signifi la cible vers laquelle le lien s'ouvrira"/></td><td><select name="target" >
+                                    <option value="_blank">_blank</option>
+                                    <option value="_self">_self</option>
+                                    <option value="_parent">_parent</option>
+                                    <option value="_top">_top</option>
+                                </select>
+                      </td></tr>
+        <tr><td>Lang</td><td><input type="text" name="lang" maxlength="5"/></td></tr>
+        <tr><td>Dir <img src="{$chemin}img/aide.png" width="20px;" height="20px;" alt="Aide sur l'attribut dir" title="Sens de lecture du site exemple ltr left to right de gauche a droite"/></td><td><select name="dir"><option value="ltr">ltr</option><option value="rtl">rtl</option></select></td></tr>
+        <tr><td>&nbsp;</td><td><input type="hidden" name="send" value="1"/></td></tr>
+        <tr><td>&nbsp;</td><td>{$btnValider}</td></tr>
+    </table>
+</form>
+
+
+
+

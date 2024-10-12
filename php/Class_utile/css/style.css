@@ -1,0 +1,27 @@
+/* 
+    Document   : style
+    Created on : 1 juin 2011, 13:16:49
+    Author     : kferrandon
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+body{
+    width: 800px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  /*  border-style: solid;*/
+    
+}
+h1{
+    color: grey;
+}

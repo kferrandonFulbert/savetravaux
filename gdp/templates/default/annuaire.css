@@ -1,0 +1,128 @@
+body{background-color:#000;  margin: 0; /* pour �viter les marges */
+  text-align: center; /* pour corriger le bug de centrage IE */ }
+a{color: brown;text-decoration: none;}
+a:hover{text-decoration: underline;}
+a.bouton, 
+button.bouton { 
+    display:-moz-inline-box; 
+    display:inline-block; 
+    margin:0; 
+    padding:0; 
+    font:16px/1.5 Arial, Helvetica, sans-serif; 
+    white-space:nowrap; 
+    text-align:center; 
+    vertical-align:middle; 
+    cursor:pointer; 
+    border:0; 
+    background:none;
+} 
+a.bouton span, 
+button.bouton span { 
+    position:relative; 
+    float:left; 
+    padding:0 0 0 5px; 
+    vertical-align:middle; 
+    background:url(img/gauche2.png) left top no-repeat; 
+} 
+a.bouton span span, 
+button.bouton span span { 
+    padding:0 5px 0 0; 
+    background:url(img/droit2.png) right top no-repeat; 
+} 
+a.bouton span span span, 
+button.bouton span span span { 
+    height:26px; 
+    padding:0; 
+    line-height:1.5; 
+    background:url(img/milieu2.png) left top repeat-x; 
+} 
+ 
+* html button {width:1%; overflow:visible;} 
+*:first-child+html button {overflow:visible;}
+
+h2{
+    text-align: center;
+}
+.contenue{
+    background-color: #fff;
+    width: 500px;
+    height: 600px;
+    overflow: auto;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: #aa6600 solid medium;
+    border-right:  burlywood solid medium;
+}
+table{width: 100%;}
+td{padding-left: 10px;}
+tr:nth-child(even) {background: burlywood}
+tr:nth-child(odd) {background: blanchedalmond;}
+
+.footer{
+    margin-bottom: 0px;
+    text-align: center;
+    color: #fff;
+}
+.footer a{
+    color: #ffff77;
+}
+
+.partenaire{
+  height: 200px;
+  overflow: auto;
+}
+
+input, select{
+width : 150px;
+}
+nav ul, li {
+    display: inline-block;
+    text-decoration: none;
+}
+nav ul li:hover{
+    background-color: burlywood;
+}
+nav ul li:after {
+    content: " | ";
+}
+/***********
+pagination 
+*/
+.pagination {
+font:12px Arial, Helvetica, sans-serif;
+margin:40px 0;
+text-align:center
+}
+ 
+.pagination a {
+background:#fff;
+border:1px solid #06c;
+color:#000;
+margin:2px;
+padding:.2em .4em;
+text-decoration:none
+}
+ 
+.pagination a:hover {
+background:#fff;
+border:1px solid #bd88fe;
+color:#bd88fe;
+}
+ 
+.pagination span.inactive {
+background:#fff;
+border:1px solid #f0f0ff;
+color:#f0f0ff;
+margin:2px;
+padding:.2em .4em
+}
+ 
+.pagination span.active {
+background:#f4ebff;
+border:1px solid #bd88fe;
+color:#bd88fe;
+font-weight:700;
+margin:2px;
+padding:.2em .4em
+}

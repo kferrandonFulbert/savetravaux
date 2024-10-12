@@ -1,0 +1,106 @@
+<html>
+  <head>
+ <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+  <script type="text/javascript">
+  google.load("jquery", "1.7.0");
+  
+  google.load("jqueryui", "1.8.16");
+
+  </script>
+      <link rel="stylesheet" type="text/css" href="smallColorPicker.css">
+    <meta http-Equiv="Content-Type" content="text/html; utf-8">  
+     <script type="text/javascript" src="farbtastic.js"></script>
+        <script type="text/javascript" src="fonction.js"></script>
+ <link rel="stylesheet" href="farbtastic.css" type="text/css" />
+  <script>
+   $(document).ready(function() {
+   //     $('.color_picker').smallColorPicker();
+       $('#demo').hide();
+    $('#picker').farbtastic('#color');
+    
+      $(".texte").keyup(function() {
+        majAll();
+      });
+      $(".couleur").keyup(function() {
+        majAll();
+      });
+      $(".couleur").blur(function() {
+        majAll();
+      });
+      $(".taille").keyup(function() {
+        majAll();
+      });
+       $(".taille").blur(function() {
+        majAll();
+      });
+      $(".rotation").keyup(function() {
+         majAll();
+      });
+      $(".opacite").keyup(function() {
+         majAll();
+      });
+      $(".style").click(function() {
+         majAll();
+      });
+      $(".transform").click(function() {
+         majAll();
+      });
+
+      
+ });</script>
+  </head>
+  <body>
+  <style>
+  label{
+    display: inline;
+    width: 70px;
+/*      ::-webkit-input-placeholder {
+     color: red;
+    }
+
+    :-moz-placeholder {
+     color: red;
+    }
+    :-ms-placeholder {
+     color: red;
+    }       */
+  }
+  </style>
+  <h1>Texte CSS3</h1>
+  <div class="form" style="width:1000px;height:400px;">
+   <form action="#" name="frmTxt" style="float:left;width:400px;" ><fieldset>
+    <legend style="">Propri&eacute;t&eacute; du texte</legend>
+        <label for="textcss" >Texte: </label>
+        <input class="texte" type="text" name="textcss" value=""/><br /><br />  
+          <div class="form-item"><label for="color">Couleur:</label><input type="text" id="color" class="couleur" name="color" value="#123456" onChange="chgColor();" /></div><div id="picker"></div>
+        <br />
+        <label for="taille">Taille: </label>
+        <input class="taille" type="number" name="taille" placeholder="Entrer un nombre" maxlength="3" value=""/><br />
+        <label for="rotation">Rotation: </label>
+        <input class="rotation" type="text" name="rotation" maxlength="3" size="3" value=""/> <br />
+        <label for="opacite">Opacit&eacute;: </label>
+        <input class="opacite" type="text" name="opacite" maxlength="4" size="4" value=""/><br />
+        <label for="style">Style: </label>
+        <select class="style" name="style">
+          <option label="normal">normal</option>
+          <option label="italic">italic</option>
+          <option label="oblique">oblique</option>
+        </select><br />
+        <label for="transform">Transform: </label>
+        <select class="transform" name="transform">
+          <option label="none">none</option>
+          <option label="capitalize" title="Met la 1ere lettre de chaque mot en majuscule">capitalize</option>
+          <option label="uppercase" title="Met la phrase en majuscule" >uppercase</option>
+          <option label="uppercase" title="Met la phrase en minuscule" >lowercase</option>
+        </select><br />
+        <a href="#" onclick="addOmbre();"><img src="img/plus.png" /></a><label for="Ombre">Ombre: </label>  <br />
+         <div class="ombre"></div>
+   </fieldset>
+   </form>
+      <div style="float:left;width:200px;"><p class="rendu" ></p></div>
+      <div class="code" style="float:left;width:380px;" ></div>
+  </div>
+  <br />
+   
+  </body>
+</html>

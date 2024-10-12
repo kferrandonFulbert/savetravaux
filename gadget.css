@@ -1,0 +1,26 @@
+body{
+	background-color: #000000;
+	height: 400px;
+	color: #FF8100
+	
+}
+a{
+	color: #FF8100;
+	text-decoration: none;
+}
+a:hover{
+	color: yellow;
+}
+a:visited{
+	color: #FF8100;
+}
+#footer{
+	color: white;
+	font-size: x-small;
+}
+#date{
+	color: white;
+}
+input{
+	background-color: #FF8100;
+}

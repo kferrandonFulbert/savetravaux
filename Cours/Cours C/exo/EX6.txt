@@ -1,0 +1,77 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define ABS(x) (x>=0?x:-x)
+
+/*
+Ex5:
+ecrire un prog qui qui permet de trier directement un tableau de 10 entier à la saisi.
+A chaque saisie d'un entier, on le stock dans sa place.
+ex saisi 5 3 4
+on place 3 4 5 
+
+ex6:
+On saisi un tableau de 10 entiers
+et on offre à l'utilisateur la possibilité de réaliser 
+un nombre de rotation a gauche ou a droite du tableau.
+2,5,6,8
+vers la droite
+8,2,5,6 ...
+
+  Ex7
+ecrir un prog qui saisi un tableau de 10 entier
+et qui affiche les occurences de ses elements sans redondance.
+  */
+
+int tab[10];
+int Ttmp[10];
+void gauche();
+void droite();
+
+void gauche()
+{
+	int i,j,Ttmp;
+	Ttmp[0]=tab[10];
+	Ttmp[10]=tab[1];
+	for(i=1;i<10;i++)
+	{
+		Ttmp[i]=tab[i+1];
+	}
+}
+void droite()
+{
+	int i,j,Ttmp;
+	Ttmp[0]=tab[10];
+	Ttmp[10]=tab[1];
+	for(i=10;i>0;i--)
+	{
+		Ttmp[i]=tab[i-1];
+	}
+}
+void main()
+{
+
+	int i,j ;
+	int tmp;
+	int choix;
+	int tab[10];
+	for(i=0 ;i<10 ;i++)
+	{
+		printf("Donner l'element %d: ",i+1);
+		scanf("%d",&tab[i]);
+
+	}	
+	do
+	{
+		printf("\n\nQue vouler vous faire?\n1)gauche\n2)droite\n");
+		scanf("%d",choix);
+		switch(choix)
+		{
+			case 1: gauche();
+				break;
+			case 2: droite();
+				break;
+			default:
+			break;
+		}
+	}while(choix!=0);	
+}

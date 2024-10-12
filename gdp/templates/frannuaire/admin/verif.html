@@ -1,0 +1,47 @@
+{include file="{$cheminTemplate}menu.html"}
+<br /><br />
+      <h2>Ajouter un partenaire</h2>
+<form method="post" action="?page=ajouter">
+    <table>
+        <tr><td>Nom *</td><td><input type="text" name="nom" maxlength="75"/></td></tr>
+        <tr><td>URL *</td><td><input type="text" name="url" maxlength="255"/></td></tr>
+        <tr><td>Code html</td><td><input type="text" name="codehtml" maxlength="255"/></td></tr>
+        <tr><td>Description</td><td><input type="text" name="description"/></td></tr>
+        <tr><td>Target <img src="{$chemin}img/aide.png" width="20px;" height="20px;" alt="Aide sur l'attribut target" title="Target signifi la cible vers laquelle le lien s'ouvrira"/></td><td><select name="target" >
+                                    <option value="_blank">_blank</option>
+                                    <option value="_self">_self</option>
+                                    <option value="_parent">_parent</option>
+                                    <option value="_top">_top</option>
+                                </select>
+                      </td></tr>
+        <tr><td>Lang</td><td><input type="text" name="lang" maxlength="5"/></td></tr>
+        <tr><td>Dir <img src="{$chemin}img/aide.png" width="20px;" height="20px;" alt="Aide sur l'attribut dir" title="Sens de lecture du site exemple ltr left to right de gauche a droite"/></td><td><select name="dir"><option value="ltr">ltr</option><option value="rtl">rtl</option></select></td></tr>
+        <tr><td>&nbsp;</td><td><input type="hidden" name="send" value="1"/></td></tr>
+        <tr><td>&nbsp;</td><td>{$btnValider}</td></tr>
+    </table>
+</form>
+<hr />
+<div class="partenaire">
+            <h2>partenaire existant</h2>
+            <table>
+{if $erreur}
+{section name=idx_annuaire loop=$annuaire}
+    <tr style="background-color:{cycle values='#ffffff,#FF8100'}"><td  onclick="window.open('{$annuaire[idx_annuaire].url|urldecode}');return false;">
+                <a href='{$annuaire[idx_annuaire].url|urldecode}' title='{$annuaire[idx_annuaire].description}' >{$annuaire[idx_annuaire].nom}</a>
+                </td>
+                <td><a href='?page=supprimer&id={$annuaire[idx_annuaire].id_annuaire}'>Supp.</a></td>
+                <td><a href='?page=modifier&id={$annuaire[idx_annuaire].id_annuaire}'>Modif.</a></td>
+                </tr>
+{/section}
+</table>
+            <br />
+{$btnRetour}&nbsp;{$btnValider}
+
+{else}
+
+      <div class='erreur'>Erreur dans la saisie du user ou du mot de passe. <br />
+      {$btnRetour}</div>
+{/if}
+</div>
+
+
